@@ -1,0 +1,488 @@
+* {
+/*   border: 1px solid #000; */
+  box-sizing: border-box;
+  font-family: 'Microsoft JhengHei';
+}
+
+html, body {
+  width: 100%; height: auto;
+  background-color: #EAEAEA;
+}
+
+body {
+  padding: 10px;
+}
+
+.resume {
+  border-radius: 8px;
+  background-color: #243c54;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, .3);
+}
+
+/* Middle Line */
+.middle-line {
+  width: 0; height: 75%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  background-color: #eaeaea;
+  border: 3px solid #EAEAEA;
+  z-index: 1;
+}
+
+.middle-line::after {
+  content: '';
+  background-color: #EAEAEA;
+  height: 20px; width: 20px;
+  
+  position: absolute;
+  bottom: -10px; left: -10px;
+  
+  border-radius: 50%;
+}
+
+/* Header */
+.header {
+  width: 100%; height: 20%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.photo {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  width: 200px; height: 200px;
+  margin: 0 auto;
+  margin-top: 3%;
+  overflow: hidden;
+}
+
+.photo img {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Content */
+.container {
+  width: 100%; height: 100%;
+  padding-bottom: 10%;
+}
+
+.left-side, 
+.right-side {
+  display: inline-block;
+  width: 50%;
+  color: #eaeaea;
+  vertical-align: top;
+}
+
+#about,
+#education, 
+#skill, 
+#experience {
+  position: relative;
+}
+
+/* Title */
+#education .title,
+#skill .title, 
+#experience .title, 
+#software .title {
+  margin-top: 4%; margin-bottom: 4%;
+  font-size: 18pt;
+  color: #9af06c;
+  letter-spacing: 3px;
+}
+
+.left-side h3.title {
+  text-align: right;
+  padding-right: 4%;
+  margin-top: 10% !important;
+}
+
+.right-side h3.title {
+  text-align: left;
+  padding-left: 4%;
+  margin-top: 10% !important; 
+}
+
+/* Bottom Line */
+#education .bottom-line,
+#about .bottom-line, 
+#experience .bottom-line {
+  width: 80%; height: 6px;
+  position: absolute;
+  background-color: #EAEAEA;
+}
+
+#education .bottom-line {
+  right: 0;
+}
+
+#education .bottom-line::after {
+  content: '';
+  width: 20px; height: 20px;
+  
+  position: absolute;
+  left: -20px; top: -8px;
+  background-color: #9af06c;
+  border-radius: 50%;
+}
+
+#about .bottom-line {
+  left: 0;
+  width: 65%;
+}
+
+#about .bottom-line::after {
+  content: '';
+  height: 20px; width: 20px;
+  position: absolute;
+  right: -10px; top: -7px;
+  background-color: #A7AAAF;
+  border-radius: 50%;
+}
+
+#experience .bottom-line {
+  left: 0;
+  width: 85%;
+}
+
+#experience .bottom-line::after {
+  content: '';
+  width: 20px; height: 20px;
+  
+  border-radius: 50%;
+  position: absolute;
+  right: -10px; top: -7px;
+  
+  background-color: #9af06c;
+}
+
+/* Content */
+#education .content,
+#about .content, 
+#experience .content {
+  margin-bottom: 4%;
+}
+
+#education .content .row {
+  text-align: right;
+  padding-right: 4%;
+  position: relative;
+}
+
+#education .content .row .date,
+#education .content .row .detail {
+  display: inline-block;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+#education .content .row .date {
+  vertical-align: top;
+  margin-right: 4%;
+}
+
+#education .content .row .detail {
+  text-align: left;
+  width: 40%;
+  right: 0;
+}
+
+#skill .content .row {
+  padding-right: 5%;
+  padding-left: 15%;
+}
+
+#skill .subtitle, 
+#skill .content h5 {
+  letter-spacing: 2px;
+}
+
+#skill .subtitle {
+  text-align: right;
+  padding-right: 5%;
+}
+
+#skill .content h5 {
+  margin: 0;
+  
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+#skill .content .row .progress {
+  height: 20px;
+  padding: 2px;
+  border: 2px solid #EAEAEA;
+  position: relative;
+}
+
+#skill > .content > .row:nth-child(2) > .progress::after,
+#skill > .content > .row:nth-child(3) > .progress::after,
+#skill > .content > .row:nth-child(4) > .progress::after,
+#skill > .content > .row:nth-child(6) > .progress::after,
+#skill > .content > .row:nth-child(7) > .progress::after, 
+#skill > .content > .row:nth-child(8) > .progress::after, 
+#skill > .content > .row:nth-child(9) > .progress::after {
+  content: '';
+  height: 12px;
+  background-color: #EAEAEA;
+  
+  position: absolute;
+}
+
+#skill > .content > .row:nth-child(2) > .progress::after,
+#skill > .content > .row:nth-child(3) > .progress::after, 
+#skill > .content > .row:nth-child(6) > .progress::after{
+  width: 70%;
+}
+
+#skill > .content > .row:nth-child(4) > .progress::after {
+  width: 65%;
+}
+
+#skill > .content > .row:nth-child(7) > .progress::after,
+#skill > .content > .row:nth-child(8) > .progress::after {
+  width: 65%;
+}
+
+#skill > .content > .row:nth-child(9) > .progress::after {
+  width: 60%;
+}
+
+#skill .content .row .value {
+  text-align: right;
+  
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+
+#about .name {
+  font-size: 2rem;
+  margin-bottom: 2%;
+  padding-left: 5%;
+  letter-spacing: 3px;
+}
+
+#about .english-name {
+  font-size: 1rem;
+}
+
+#about .content .info,
+#about .content .detail {
+  display: inline-block;
+}
+
+#about .content .info {
+  padding-left: 8%;
+  margin-right: 3%;
+}
+
+#about .content ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  
+  color: #9af06c;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: inline-block;
+}
+
+#about .content .info ul svg {
+  width: 20px;
+}
+
+#about .content .detail ul {
+  letter-spacing: 1px;
+}
+
+#about .content ul li {
+  line-height: 1.6rem;
+}
+
+#about .content ul i {
+    width: 20px;
+}
+
+#experience .content,
+#software .content {
+  padding-left: 5%;
+}
+
+#experience .content .date,
+#experience .content .detail {
+  display: inline-block;
+  line-height: 1.6rem;
+  letter-spacing: 4px;
+}
+
+#experience .content .date {
+  vertical-align: top;
+  width: 30%;
+}
+
+#software .content .row {
+  padding: 10px 0;
+}
+
+#software .content .row .card {
+  display: inline-block;
+  width: 40%; height: 100%;
+  text-align: center;
+  
+  position: relative;
+  margin-right: 20px;
+}
+
+#software .content .row .card h4 {
+  margin: 2% 0;
+  letter-spacing: 1px;
+}
+
+#software .content .row .card .circle {
+  display: inline-block;
+  width: 80px; height: 80px;
+  
+  position: relative;
+  margin-top: 10px;
+  background-color: #EAEAEA;
+  
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#software .content .row .card .circle .inner {
+  display: inline-block;
+  width: 64px; height: 64px;
+  
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 50%;
+  background-color: #5a585d;
+  
+  z-index: 3;
+}
+
+#software .content .row .card .circle .inner .label {
+  position: relative;
+  
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+
+#software .content .row .card .circle .progress-left,
+#software .content .row .card .circle .progress-right {
+  display: inline-block;
+  width: 80px; height: 80px;
+  
+  position: absolute;
+  left: 0; top: 0;
+  
+  background-color: #9af06c;
+  clip-path: inset(0 0 0 50%);
+}
+
+#software .content .row .card .circle .p80, 
+#software .content .row .card .circle .p65 {
+  z-index: 2;
+  transform: rotate(108deg);
+}
+
+#software .content .row .card .circle .p65 {
+  transform: rotate(54deg);
+}
+
+/* Media Query */
+@media only screen and (max-width: 1100px) {
+  #about .content .info ul li span {
+    display: none;
+  }
+}
+
+/* Media Query */
+@media only screen and (max-width: 1100px) {
+	#about .content .info ul span {
+		display: none
+	}
+
+  #experience .content .row .date,
+	#experience .content .row .detail {
+		margin-left: 4%
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#about .name .english-name {
+		font-size: .9rem;
+	}
+  
+  #about .content .info {
+    padding-left: 4%;
+  }
+
+	#experience .content .row:nth-child(1) {
+		margin-bottom: 4%;
+	}
+
+	#experience .content .row .date {
+		width: 80%;
+		margin-bottom: 5px;
+		border-bottom: 2px solid #EAEAEA;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	#about .name .english-name::before {
+		content: "\A";
+		white-space: pre;
+	}
+
+	#education .content .row {
+		margin-bottom: 4%;
+	}
+
+	#education .content .row .date,
+	#education .content .row .detail {
+		width: 80%;
+	}
+
+	#education .content .row .date {
+		border-bottom: 2px solid #EAEAEA;
+		margin-bottom: 5px;
+	}
+
+	#education .content .row .detail {
+		text-align: right;
+		margin-right: 4%;
+	}
+  
+  #software .content .row .card {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #experience .content .row .detail {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+	#software .content .row .card {
+    width: 100%;
+	}
+}
